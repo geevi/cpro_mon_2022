@@ -38,7 +38,9 @@ Read/Watch:
 - Visualizing Algo: https://visualgo.net/en/recursion  
   
 Solve:
-- Draw a tree using recursive drawing    Or even better (can be done in 10 lines of code).   
+- Draw a tree using recursive drawing ![](/lec3/tree-normal.png)     
+  Or even better (can be done in 10 lines of code).
+  ![](lec3/tree.jpg)   
 [Solution in Skia (web)](https://fiddle.skia.org/c/7b96d0cb407d99a0e81ed220ba47409c).
 Skia Drawing Examples: 1 2 3
 
