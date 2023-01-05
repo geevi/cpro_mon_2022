@@ -9,7 +9,7 @@ int fact(int n) {
 
 PerumationList create_perm_list(int n) {
     int fn = fact(n);
-    int** pl = malloc(fn*sizeof(int *));
+    PerumationList pl = malloc(fn*sizeof(int *));
     for(int i =0; i < fn ;i++) {
         pl[i] = malloc(n*sizeof(int)); 
     }

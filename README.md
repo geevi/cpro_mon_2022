@@ -83,10 +83,12 @@ Solve:
 - Modify srms.c to include option 3 giving the total revenue on a particular day. On entering option 3, the program should ask for a day and print out all the reciepts issued on that day followed by the total revenue. 
 
 ### Lec 26: Abstract Data Type III
-Enums | Social Network application
+Enums | Strings in C | Social Network application
+[slides](lec7/slides.md) | [enum.c](lec7/enum.c) | [str.c](lec7/str.c) | [social_net.c](lec7/social_nets.c)
+
 
 ### Lec 27: Abstract Data Type IV
-Memory layout of structs |  string in C
+
 
 ### Lec 28: Multifile Programming
 Header files | Make files
