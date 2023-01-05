@@ -26,14 +26,14 @@ int fib_cache(int n, int *cache) {
 
 
 
-int main(int argc, char const *argv[])
+int main()
 {
 
     // for (int i = 0; i < 45; i++) {
     //     printf("%d ", fib(i));
     // }
         
-    int *cache = malloc(sizeof(int) * MAX_CACHE);
+    int cache[MAX_CACHE];
 
 
     for (int i = 0; i < MAX_CACHE; i++) {
@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
     cache[1] = 1;
 
     for (int i = 0; i < 45; i++) {
-        printf("%d ", fib_cache(i, cache));
+        printf("%d ", fib_cache(i, &cache));
     }
     printf("\n");
     free(cache);

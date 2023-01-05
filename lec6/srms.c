@@ -65,6 +65,8 @@ int main() {
     Database db;
     db.customer_count = db.reciept_count = 0;
 
+    // printf("%d %d\n", sizeof(db), sizeof(&db));
+
     while(true) {
 
         system("@cls||clear"); // clears the screen
