@@ -9,17 +9,17 @@ typedef struct Customer {
     int phone_no;
 } Customer;
 
-// typedef enum PayMode {
-//     Cash = 0,
-//     Card = 1,
-//     UPI = 2
-// } PayMode;
+typedef enum PayMode {
+    Cash = 0,
+    Card = 1,
+    UPI = 2
+} PayMode;
 
 typedef struct Reciept {
     time_t time;
     float value;
     Customer *customer;
-    // PayMode mode;
+    PayMode mode;
 } Reciept;
 
 typedef struct Database {
@@ -50,13 +50,13 @@ Customer* add_customer(char *name, int phone_no, Database *db) {
     return c;
 }
 
-Reciept* add_reciept(int value, Customer* c, Database *db) {
+Reciept* add_reciept(int value, Customer* c, PayMode mode, Database *db) {
     time_t now = time(NULL);
     Reciept* r = &(db->reciepts[db->reciept_count++]);
     r->customer= c;
     r->value = value;
     r->time = now;
-    // r->mode = mode;
+    r->mode = UPI;
     return r;
 }
 
@@ -64,6 +64,7 @@ int main() {
 
     Database db;
     db.customer_count = db.reciept_count = 0;
+    int i = UPI;
 
     // printf("%d %d\n", sizeof(db), sizeof(&db));
 
@@ -82,7 +83,7 @@ int main() {
         int option;
         scanf("%d", &option);
 
-        int p, v;
+        int p, v, m;
         Customer* c = NULL;
         char name[100];
         switch (option)
@@ -96,11 +97,11 @@ int main() {
                     scanf("%s", name);
                     c = add_customer(name, p, &db);
                 }
-                // printf("Payment Mode (0 for Cash, 1 for Card, 2 for UPI): ");
-                // scanf("%d", &m);
+                printf("Payment Mode (0 for Cash, 1 for Card, 2 for UPI): ");
+                scanf("%d", &m);
                 printf("Reciept Amount: ");
                 scanf("%d", &v);
-                add_reciept(v, c, &db);
+                add_reciept(v, c, m, &db);
                 break;
 
             case 1:

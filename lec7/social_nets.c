@@ -8,6 +8,7 @@ struct Person {
     char name[100];
     int age;
     int count_friends;
+    
     struct Person *friends[5];
 };
 
@@ -27,21 +28,42 @@ void print_person(struct Person p) {
     printf("\n");
 }
 
+struct Person * find_person(char* name1, SocialNet *sn) {
+    struct Person* p = NULL;
+    for(int i = 0; i < sn->size; i++) {
+        if (strcmp(sn->members[i].name, name1) == 0) {
+            p = &(sn->members[i]);
+        }
+    }
+    return p;
+}
+
+bool check_mutual_friends(char *name1, char *name2, SocialNet *sn) {
+    struct Person *p1 = find_person(name1, sn);
+    struct Person *p2 = find_person(name2, sn);
+
+
+    // HW
+
+}
+
 int main()
 {
     SocialNet sn;   
     sn.size = 0;
     
+    // sn.members[0].name = "Alice";
     strcpy(sn.members[0].name, "Alice");
     sn.members[0].age = 24;
-    strcpy(sn.members[0].name, "Bob");
+    strcpy(sn.members[1].name, "Bob");
     sn.members[1].age = 22;
-    strcpy(sn.members[0].name, "Charlie");
+    strcpy(sn.members[2].name, "Charlie");
     sn.members[2].age = 28;
-    strcpy(sn.members[0].name, "Dale");
+    strcpy(sn.members[3].name, "Dale");
     sn.members[3].age = 26;
-    strcpy(sn.members[0].name, "Earl");
+    strcpy(sn.members[4].name, "Earl");
     sn.members[4].age = 30;
+    sn.size=5;
     
     sn.members[0].friends[0] = &sn.members[3];
     sn.members[0].friends[1] = &sn.members[4];
@@ -50,13 +72,13 @@ int main()
     sn.members[1].friends[0] = &sn.members[0];
     sn.members[1].count_friends=1;
 
-    sn.members[1].friends[0] = &sn.members[0];
-    sn.members[1].count_friends=1;
+    sn.members[2].friends[0] = &sn.members[3];
+    sn.members[2].count_friends=1;
 
 
 
     for (int i=0;i <5; i++) {
-        print_person(directory[i]);
+        print_person(sn.members[i]);
     }
 
 
