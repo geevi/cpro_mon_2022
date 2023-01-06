@@ -39,9 +39,7 @@ Read/Watch:
   
 Solve:
 - Draw a tree using recursive drawing 
-  <img src="https://raw.githubusercontent.com/geevi/cpro_mon_2022/main/lec3/tree-normal.png" width="100" height="100">     
-  Or even better (can be done in 10 lines of code).
-  <img src="https://raw.githubusercontent.com/geevi/cpro_mon_2022/main/lec3/tree.jpg" width="100" height="100">
+  <img src="https://raw.githubusercontent.com/geevi/cpro_mon_2022/main/lec3/tree-normal.png" width="100" height="100"> Or even better (can be done in 10 lines of code): <img src="https://raw.githubusercontent.com/geevi/cpro_mon_2022/main/lec3/tree.jpg" width="100" height="100">
 
 [Solution in Skia (web)](https://fiddle.skia.org/c/7b96d0cb407d99a0e81ed220ba47409c).
 Skia Drawing Examples: 1 2 3
