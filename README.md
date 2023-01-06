@@ -82,21 +82,44 @@ Solve:
 - Modify srms.c to include an option 2 for listing all reciepts for a particular customer. On entering option 2, the program should ask for a phone number and then slow the list of reciepts sorted chronologically.
 - Modify srms.c to include option 3 giving the total revenue on a particular day. On entering option 3, the program should ask for a day and print out all the reciepts issued on that day followed by the total revenue. 
 
+### Doubt Clearing with Instructor Session I : Pointers and Recursion
+[perm.c](revision/perm.c)
+
 ### Lec 26: Abstract Data Type III
-Enums | Strings in C | Social Network application
+Enums | Strings in C | Social Network application    
 [slides](lec7/slides.md) | [enum.c](lec7/enum.c) | [str.c](lec7/str.c) | [social_net.c](lec7/social_nets.c)
+
+Solve:  
+- Find mutual friends in social_nets.c  
+- Given 2 names, check if they connected through their friends.   
+  - Input: 2 strings `name1`, `name2`
+  - Output: check if there is a person `p` such that `p` is a friend of `name1` and `name2` is a friend of `p`.
 
 
 ### Lec 27: Abstract Data Type IV
+Union | Bitfields |
 
 
-### Lec 28: Multifile Programming
+### Doubt Clearing with Instructor Session II: Structs
+
+### Lec 28: Abstract Data Type V
+Problem Solving
+
+
+### Quiz 2
+
+### Lec 29: File Handling I
+
+### Lec 30: File Handling II
+
+### Lec 31: Multifile Programming
 Header files | Make files
 
-### Lec 29: File Handling 
-### Lec 30: Command Line Arguments | Macros/Preprocessor
-### Lec 31: Func Prog I
-Function Pointer, Sorting for an array of struct
-Map | Filter 
-### Lec 32: Func Prog II | Variadic Function
-### Lec 33-36: Project | Revision | C++
+
+### Lec 32: Command Line Arguments | Profiler
+### Lec 33: Macros/Preprocessor
+### Lec 34: Function Pointer, Sorting for an array of struct
+            Map | Filter 
+### Lec 35:
+### Lec 36: Summary/Conclusion
+
