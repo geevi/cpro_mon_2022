@@ -3,27 +3,27 @@
 
 ### Lec 20: Recursion I
 Factorial | Fibonacci | n choose k   
-Slides | [factorial.c](lec1/factorial.c) | [fib.c](lec1/fibonacci.c) | [choose.c](lec1/choose.c)  
+Slides | [factorial.c](lecs/20/factorial.c) | [fib.c](lecs/20/fibonacci.c) | [choose.c](lecs/20/choose.c)  
 Read:
 - https://redirect.cs.umbc.edu/~chang/cs202.f98/readings/recursion.html
 - Section 7.3 in https://hal.inria.fr/hal-02383654/file/ModernC.pdf
 - https://web.mit.edu/6.005/www/fa15/classes/10-recursion/
   
 Solve:
-- Write a program which prints all permutations of numbers from n to n+k-1. Input is n,k. (see slides last page).
-- Write a program which takes input a number n, and an nxn matrix and outputs the determinant of that matrix. 
+- Write a program which prints all permutations of numbers from $n$ to $n+k-1$. Input is $n,k$. (see slides last page).
+- Write a program which takes input a number $n$, and an $n\times n$ matrix and outputs the determinant of that matrix. 
 
 ### Lec 21: Recursion II 
 Euclids GCD | Fibonacci using Cache | Determinant | Typedef | Enumerating Permutations  
-[slides](lec2/lec2.md) | [fib_cache.c](lec2/fib_cache.c) | [det.c](lec2/det.c) | [perm.c](lec3/perm.c)   
+[slides](lecs/21/lec2.md) | [fib_cache.c](lecs/21/fib_cache.c) | [det.c](lecs/21/det.c) | [perm.c](lecs/21/perm.c)   
 Read:
 - https://en.wikipedia.org/wiki/Recursion_(computer_science)
   
 Solve:
-- Write a recursve program to find the shortest path from (1,1) to (n,n) in an nxn grid with obstacles. (see slides for some ideas).
-- Write a program for enumerating all k element subsets of an arbitrary n sized set. Algorithm should work on n = 20, k=10 reasonably fast.  
-      - Input: k, n, and S (an arbitary set of n numbers)  
-      - Output: Print every subset of S of size k.  
+- Write a recursve program to find the shortest path from $(1,1)$ to $(n,n)$ in an $n\times n$ grid with obstacles. (see slides for some ideas).
+- Write a program for enumerating all $k$ element subsets of an arbitrary $n$ sized set. Algorithm should work on $n = 20, k=10$ reasonably fast.  
+      - Input: $k, n,$ and $S$ (an arbitary set of $n$ numbers)  
+      - Output: Print every subset of $S$ of size $k$.  
       - Example: On input 2, 4 and 1 2 3 4, ouput 1 2,  2 3, 3 4, 1 3, 1 4, 2 4.
 Explore:
 - https://natureofcode.com/book/chapter-8-fractals/
@@ -46,7 +46,7 @@ Skia Drawing Examples: 1 2 3
 
 ### Lec 23: Recursion IV - Mergesort
 Mergesort | More GDB | Passing Pointers   
-[slides](lec4/slides.md) | [sort.c](lec4/sort.c)  
+[slides](lecs/23/slides.md) | [sort.c](lecs/23/sort.c)  
 Read:
 - Call by Value/Reference: https://www.scaler.com/topics/c/call-by-value-and-call-by-reference-in-c/
 - Passing Multidim array to func: https://solarianprogrammer.com/2019/03/27/c-programming-passing-multi-dimensional-array-to-function/  
@@ -59,7 +59,7 @@ Solve:
 
 ### Lec 24:Abstract Data Type I
 struct | struct from struct | array of struct | pointer to struct  
-[slides](lec5/slides.md) | [point.c](lec5/point.c) | [draw circles with struct](https://fiddle.skia.org/c/c888ec30005d8af42b3925e4a919336e) | [draw tree with struct](https://fiddle.skia.org/c/71b68e1656277054222b26734ca18610)  
+[slides](lecs/24/slides.md) | [point.c](lecs/24/point.c) | [draw circles with struct](https://fiddle.skia.org/c/c888ec30005d8af42b3925e4a919336e) | [draw tree with struct](https://fiddle.skia.org/c/71b68e1656277054222b26734ca18610)  
 Read:
 - https://codeforwin.org/2018/06/structures-in-c-programming-need-and-use.html
 - https://beginnersbook.com/2014/01/c-structures-examples/
@@ -67,11 +67,11 @@ Read:
 - https://www.tutorialspoint.com/cprogramming/c_structures.htm
   
 Solve:
-- See the comments in the file for the problem statement: [social_nets.c](lec5/social_nets.c) (3 problems are mentioned).
+- See the comments in the file for the problem statement: [social_nets.c](lecs/24/social_nets.c) (3 problems are mentioned).
 
 ### Lec 25: Abstract Data Type II
 Example application of using Structs to build a Reciept/Customer Management System  
-[slides](lec6/slides.md) | [srms.c](lec6/srms.c)  
+[slides](lecs/24/slides.md) | [srms.c](lecs/24/srms.c)  
 Read:
 - Strings in C   
   https://www.programiz.com/c-programming/c-strings | https://www.programiz.com/c-programming/string-handling-functions
@@ -87,7 +87,7 @@ Solve:
 
 ### Lec 26: Abstract Data Type III
 Enums | Strings in C | Social Network application    
-[slides](lec7/slides.md) | [enum.c](lec7/enum.c) | [str.c](lec7/str.c) | [social_net.c](lec7/social_nets.c)
+[slides](lecs/25/slides.md) | [enum.c](lecs/25/enum.c) | [str.c](lecs/25/str.c) | [social_net.c](lecs/25/social_nets.c)
 
 Solve:  
 - Find mutual friends in social_nets.c  
