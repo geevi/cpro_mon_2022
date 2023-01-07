@@ -71,7 +71,7 @@ Solve:
 
 ### Lec 25: Abstract Data Type II
 Example application of using Structs to build a Reciept/Customer Management System  
-[slides](lecs/24/slides.md) | [srms.c](lecs/24/srms.c)  
+[slides](lecs/25/slides.md) | [srms.c](lecs/25/srms.c)  
 Read:
 - Strings in C   
   https://www.programiz.com/c-programming/c-strings | https://www.programiz.com/c-programming/string-handling-functions
@@ -87,7 +87,7 @@ Solve:
 
 ### Lec 26: Abstract Data Type III
 Enums | Strings in C | Social Network application    
-[slides](lecs/25/slides.md) | [enum.c](lecs/25/enum.c) | [str.c](lecs/25/str.c) | [social_net.c](lecs/25/social_nets.c)
+[slides](lecs/26/slides.md) | [enum.c](lecs/26/enum.c) | [str.c](lecs/26/str.c) | [social_net.c](lecs/26/social_nets.c)
 
 Solve:  
 - Find mutual friends in social_nets.c  
