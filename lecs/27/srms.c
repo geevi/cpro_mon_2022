@@ -56,7 +56,7 @@ Reciept* add_reciept(int value, Customer* c, PayMode mode, Database *db) {
     r->customer= c;
     r->value = value;
     r->time = now;
-    r->mode = UPI;
+    r->mode = mode;
     return r;
 }
 
@@ -70,12 +70,12 @@ int main() {
 
     while(true) {
 
-        system("@cls||clear"); // clears the screen
+        // system("@cls||clear"); // clears the screen
 
         printf("-------------------------------------------------------------------\n"
                "Store Reciept Management System\n"
                "-------------------------------------------------------------------\n"
-               "\tOptions: 0 New Receipt | 1 New Customer |\n"
+               "\tOptions: 0 New Receipt | 1 New Customer | 2 Reciepts by Customer \n"
                "\tStats: %d Customers | %d Reciepts\n"
                "-------------------------------------------------------------------\n"
                "Enter Option: ", db.customer_count, db.reciept_count);
@@ -114,6 +114,25 @@ int main() {
                     c = add_customer(name, p, &db);
                 }
                 break;
+
+            case 2:
+                // input a phone nom
+                printf("Enter Customer Phone: ");
+                scanf("%d", &p);
+                c = find_customer_by_phone_no(p, &db); 
+
+        
+                // print out all reicepts curresponding to that customer.
+                    printf("No.\tValue\n"
+                            "--------------------------\n");
+                for(int i =0; i< db.reciept_count; i++) {
+
+                    if (db.reciepts[i].customer == c) {
+                        printf("%d\t%f\n", i, db.reciepts[i].value);
+                    }
+                }
+
+                    printf("----------------------\n");
             
             default:
                 break;

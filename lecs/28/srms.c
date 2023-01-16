@@ -56,9 +56,61 @@ Reciept* add_reciept(int value, Customer* c, PayMode mode, Database *db) {
     r->customer= c;
     r->value = value;
     r->time = now;
-    r->mode = UPI;
+    r->mode = mode;
     return r;
 }
+
+
+
+// sorts an array of Reciept* by the time
+// void sort_reciepts(Reciept** reciepts, int size) {
+
+// }
+
+
+void print_all_reciepts_on_day(int day, int month, int year, Database* db) {
+    int total_rev = 0;
+    for(int i =0; i < db->reciept_count; i++) {
+        struct tm* info = local_time(&(db->reciepts[i].time));
+        if (info->tm_mday == day && info->tm_mon == (month - 1) && info->tm_year == (year -1900) ) {
+            printf("%s\t%d\n", db->reciepts[i].customer->name, db->reciepts[i].value);
+            total_rev += db->reciepts[i].value;
+        }
+    }
+    printf("Total Revneue is %d", total_rev);
+
+}
+
+
+
+void sort_reciepts(Reciept* r, int size) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
 
 int main() {
 
@@ -70,12 +122,12 @@ int main() {
 
     while(true) {
 
-        system("@cls||clear"); // clears the screen
+        // system("@cls||clear"); // clears the screen
 
         printf("-------------------------------------------------------------------\n"
                "Store Reciept Management System\n"
                "-------------------------------------------------------------------\n"
-               "\tOptions: 0 New Receipt | 1 New Customer |\n"
+               "\tOptions: 0 New Receipt | 1 New Customer | 2 Reciepts by Customer \n"
                "\tStats: %d Customers | %d Reciepts\n"
                "-------------------------------------------------------------------\n"
                "Enter Option: ", db.customer_count, db.reciept_count);
@@ -114,7 +166,32 @@ int main() {
                     c = add_customer(name, p, &db);
                 }
                 break;
-            
+
+            case 2:
+                // input a phone nom
+                printf("Enter Customer Phone: ");
+                scanf("%d", &p);
+                c = find_customer_by_phone_no(p, &db); 
+
+                // print out all reicepts curresponding to that customer.
+                    printf("No.\tValue\n"
+                            "--------------------------\n");
+                for(int i =0; i< db.reciept_count; i++) {
+
+                    if (db.reciepts[i].customer == c) {
+                        printf("%d\t%f\n", i, db.reciepts[i].value);
+                    }
+                }
+
+                    printf("----------------------\n");
+
+            case 3:
+                int day, month, year;
+                printf("Enter Date: ");
+                scanf("%d-%d-%d", &day,&month,&year);
+                print_all_reciepts_on_day(day, month, year, &db);
+
+
             default:
                 break;
         }
