@@ -9,6 +9,8 @@ int main()
     
     print_network(&sn);
 
+    printf("%d\n",check_degree_of_seperation(&(sn.members[0]), &(sn.members[1]), 3));
+
     
     return 0;
 }

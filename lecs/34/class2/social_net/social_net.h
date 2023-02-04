@@ -32,4 +32,4 @@ struct Person * find_person(char* name1, SocialNet *sn);
 void setup_ABCDE_network(SocialNet *sn);
 
 // check if q is at a distance <= degree from p
-bool check_degree_of_seperation(Person* p, Person* q, int degree);
+bool check_degree_of_seperation(struct Person* p, struct Person* q, int degree);

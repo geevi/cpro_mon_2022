@@ -54,10 +54,12 @@ void setup_ABCDE_network(SocialNet *sn) {
     sn->members[1].count_friends=1;
 
     sn->members[2].friends[0] = &(sn->members[3]);
-    sn->members[2].count_friends=1;
+    sn->members[2].friends[1] = &(sn->members[1]);
+    sn->members[2].count_friends=2;
     sn->members[3].friends[0] = &(sn->members[0]);
     sn->members[3].friends[1] = &(sn->members[4]);
-    sn->members[3].count_friends=2;
+    sn->members[3].friends[2] = &(sn->members[2]);
+    sn->members[3].count_friends=3;
     sn->members[4].friends[0] = &(sn->members[0]);
     sn->members[4].friends[1] = &(sn->members[3]);
     sn->members[4].count_friends=2;
@@ -68,7 +70,7 @@ void setup_ABCDE_network(SocialNet *sn) {
 
 bool check_degree_of_seperation(struct Person* p, struct Person* q, int degree) {
     if (degree == 1) {
-        if (p==q) {
+        if (p == q) {
             return true;
         } else {
             for (int i =0 ; i < p->count_friends; i ++) {
