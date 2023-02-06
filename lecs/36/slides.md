@@ -14,7 +14,10 @@ marp: true
 
 
 ---
-# `void` Pointer
+# Header file Issues
+
+---
+# Generic Linked List using `void` Pointer
 
 ---
 # Summary: Part I
@@ -23,7 +26,7 @@ marp: true
   - if/then/else switch/case
   - variables, literals, basic datatypes
   - basic I/O: printf/scanf
-- Pointers and Array
+- Pointers, Array, Strings
   - pointer arithmetic
   - dynamic memory allocation malloc/free
 
@@ -34,12 +37,12 @@ marp: true
   - Structs, Struct Array, Struct Pointer, Struct of Struct
   - Recursive structs using pointers     
     (Linked Lists, Social Net)
-- File I/O
-  - fgets/fputs fscanf/fprintf fread/fwrite
+- File I/O : fgets/fputs fscanf/fprintf fread/fwrite
 - Misc
   - Macros
   - Commandline Arguments
   - Multifile Programs
+  - C std Libraries (time.h, string.h)
 
 ---
 # Programs Covered
@@ -47,9 +50,9 @@ marp: true
 - Mergesort using Recursion
 - Drawing tree using Recursion
 - Store Reciept Management System
-- Social Network
+- Social Network: 6 degrees of seperation
 - Bank Account Management
-- Linked Lists
+- Generic Linked Lists
 ---
 # C Features not covered
 - Unions and Bitfields
@@ -79,8 +82,7 @@ marp: true
 
 ---
 # Recursion and Fractals
-
-
+![width:250px](tree.jpg) ![width:250px](mcmjul1.gif) ![width:250px](madelbrot.jpg)
 
 ### Some Books 
 - Godel, Escher & Bach, David Hofstradter.
@@ -92,10 +94,15 @@ marp: true
 - https://github.com/liballeg/allegro_wiki/wiki/Allegro-Vivace
 
 ---
+# Margaret Hamilton
 
+Appolo Missions (1960) Softare Architect
 
-![](Margaret_Hamilton.jpg)
+![width:300px](Margaret_Hamilton.jpg)
 https://solarsystem.nasa.gov/people/320/margaret-hamilton/
 
 ---
 
+# Thanks and Goodluck!
+
+---
