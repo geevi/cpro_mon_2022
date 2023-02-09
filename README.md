@@ -96,20 +96,6 @@ Solve:
   - Output: check if there is a person `p` such that `p` is a friend of `name1` and `name2` is a friend of `p`.
 
 
-See respective folders under [lecs](lecs) for material for remaining lectures.
-
-### Lec 27: Abstract Data Type IV
 
 
-### Doubt Clearing with Instructor Session II: Structs
-
-### Lec 28: Abstract Data Type V
-Problem Solving
-
-
-### Quiz 2
-
-### Lec 29: File Handling I
-
-### Lec 30: File Handling II
-
+### See respective folders under [lecs](lecs) for material for remaining lectures.
