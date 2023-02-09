@@ -96,8 +96,9 @@ Solve:
   - Output: check if there is a person `p` such that `p` is a friend of `name1` and `name2` is a friend of `p`.
 
 
+See respective folders under [lecs](lecs) for material for remaining lectures.
+
 ### Lec 27: Abstract Data Type IV
-Union | Bitfields |
 
 
 ### Doubt Clearing with Instructor Session II: Structs
@@ -111,15 +112,4 @@ Problem Solving
 ### Lec 29: File Handling I
 
 ### Lec 30: File Handling II
-
-### Lec 31: Multifile Programming
-Header files | Make files
-
-
-### Lec 32: Command Line Arguments | Profiler
-### Lec 33: Macros/Preprocessor
-### Lec 34: Function Pointer, Sorting for an array of struct
-            Map | Filter 
-### Lec 35:
-### Lec 36: Summary/Conclusion
 
