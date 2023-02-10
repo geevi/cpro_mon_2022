@@ -78,29 +78,32 @@ void setup_ABCDE_network(SocialNet *sn) {
 // checks if q is at a distance of <= degree from p
 bool check_degree_of_seperation(struct Person* p, struct Person* q, int degree) {
 
-    if (degree < 0) {
-        return false;
-    }
+// assumeing degree >= 0
+    if (degree <= 1) {
 
-    if ( degree == 1) {
-        if (p == q) {
+        if (p==q) {
             return true;
-        } else {
-            for (int i = 0; i < p->count_friends; i ++) {
-                if (p->friends[i] == q) {
-                    return true;
-                }
+        }
+        for (int i =0; i < p->count_friends; i++) {
+            if (p->friends[i] == q) {
+                return true;
             }
         }
-        return false;
-
-    } else if (p==q) {
-        return true;
+    
     } else {
-        bool is_within_degree = false;
-        for (int i = 0; i < p->count_friends; i++) {
-            is_within_degree = is_within_degree || check_degree_of_seperation(p->friends[i], q, degree-1);
+        for (int i =0; i < p->count_friends; i++) {
+            if (check_degree_of_seperation(p->friends[i],q, degree-1)) {
+                return true;
+            }
         }
-        return is_within_degree;
     }
+    return false;    
 }
+
+
+
+
+
+
+
+
